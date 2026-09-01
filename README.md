@@ -25,3 +25,22 @@ Fork the repository and create a folder in ```Code``` and a folder in ```Data```
 Friday 30th October 2026, 9pm GMT. Winner announced on Friday 13th November 2026. 
 
 
+
+
+
+## Database Correction
+After releasing the database, we unfortunately encountered an issue with the depth values of a specific dataset.
+
+The corrections only apply to the **"healy_2016"** dataset and are as follows: 
+- Both the "CTD_Pressure_[dbar]" and the "Depth_From_Pressure_[meters_below_surface]" must be replaced with **NaN** values.
+- The "Sample_Depth_[meters_below_surface]" and "Combined_Depth_[meters_below_surface]" must be replaced with values of **8**. 
+
+If you're using pandas, we suggest incorporating  the following code into your read in to correct this:
+```
+mask = df["Dataset"] == "healy_2016"
+
+df.loc[mask, "CTD_Pressure_[dbar]"] = np.nan
+df.loc[mask, "Depth_From_Pressure_[meters_below_surface]"] = np.nan
+df.loc[mask, "Sample_Depth_[meters_below_surface]"] = 8
+df.loc[mask, "Combined_Depth_[meters_below_surface]"] = 8
+```
