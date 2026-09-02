@@ -1,0 +1,35 @@
+Field,Units,Description,Comments
+Dataset,No Units,"Short name of the dataset or file the data was extracted from, used for identification of different datasets within the database",
+ISO8601_Datetime,yyyy-mm-ddThh:mm:ss,"ISO8601 datetime on which sample was taken, as reported by the data source (note entries without a day have been assigned 01/mm/yyyy and entries without a time have been assigned 00:00:00)",Present for all samples
+Latitude_[degree_north],Degrees,Latitude of sampling position decimalised (-90° to 90° where negative values indicate latitudes South of the equator and positive ones indicate those North of it),Present for all samples
+Longitude_[degree_east],Degrees,"Longitude of sampling position decimalised (-180° to 180°, where negative values indicate longitudes West of the Prime Meridian, and positive values indicate longitudes East of it)",Present for all samples
+Temperature_[cel],Degrees Celcius,"The sensor derived temperature of the sample, ITS-90",
+CTD_Temperature_WOCE_Flag,No Units,QC flag for the temperature (included where present),
+CTD_Pressure_[dbar],dbar,CTD/sensor derived pressure of the sample,"Some samples may have both pressure and depth but should have a minimum of one or the other, should be assumed to be a surface measurement where not present in freshwater samples"
+Depth_From_Pressure_[meters_below_surface],meters below surface,Depth value derived from the CTD pressure and latitude using the following function (implemented in python) https://www.teos-10.org/pubs/gsw/html/gsw_z_from_p.html,
+Sample_Depth_[meters_below_surface],meters below surface,"Depth (meters below surface) at which samples were taken, increases positively with increasing depth below water's surface",Should be assumed to be a surface measurement where not present in freshwater samples
+Combined_Depth_[meters_below_surface],meters below surface,"Combined column of Depth_From_Pressure and Sample_Depth; where both are present, Depth_From_Pressure takes precedence",Should be assumed to be a surface measurement where not present in freshwater samples
+Delta_O18_[permillle],per mille,"The delta O18 measurement of a sample as compared to the reference standard listed in the ""O18 standard"" column",Present for all samples
+Delta_O18_WOCE_Flag_Translated,No Units,The WOCE flag for the DELO18 column measurement datasets with non standard flags have been translated into their WOCE alternative (included where present),Datasets where non-standard WOCE flags have been used (and the meanings provided) have been translated into their WOCE equivelants
+Delta_O18_WOCE_Flag_Original,No Units,"The WOCE flag for the DELO18 column measurement, here datasets with non-standard flags have been left as they were originally listed (included where present)",
+O18_Standard,No Units,"The specified standard against which the O18 measurement was taken, any data entry for which the O18 Standard could not  be found is labelled as ""VSMOW (assumed)"", the standard for the entries cannot be found and should therefore be treated as VSMOW but treated with caution",Present for all samples
+Barium,"See ""Barium Units"" Column",The Barium measurement of a sample,Present for all samples
+Barium_WOCE_Flag,No Units,The WOCE flag for the Barium column measurement,
+Barium_Units,No Units,Units that the associated Barium measurement was reported in,Present for all samples
+CTD_Salinity_[standard_salinity_units],Dimensionless,The sensor/CTD derived salinity of a sample,All non-freshwater samples should contain a CTD or bottle salinity value
+CTD_Salinity_WOCE_Flag,No Units,WOCE flag for the sensor derived salinity (included where present),
+Bottle_Salinity_[standard_salinity_units],Dimensionless,The bottle derived salinity for a sample,All non-freshwater samples should contain a CTD or bottle salinity value
+Bottle_Salinity_WOCE_Flag,No Units,WOCE flag for the bottle derived salinity (included where present),
+Cruise_ID,No Units,The cruise name or ID on which the samples were taken,
+Station_ID_Name,No Units,The unique identifier for the station at which the samples were taken,
+Site_Number_Name,No Units,The unique identifier for the site at which the samples were taken (only present for land based sampling),
+Sample_ID,No Units,The unique identifier for the sample taken,
+Cast_Number,No Units,The cast number the sample was measured in,
+Bottle_Number,No Units,The bottle number the sample was measured in ,
+Event,No Units,"A unique identifier similar to ""Sample ID"" that marks the event",
+Rosette_Position,No Units,An identifier for the position of a bottle on the CTD rosette,
+Platform,No Units,The name or identifier of a platform from which sampling was taken,
+BIOPOLE,No Units,"A boolean flag to mark whether a sample was take on a study associated with (but not funded by) the BIOPOLE campaign (True), or not (False)",
+Freshwater,No Units,A boolean flag to mark whether a sample is freshwater (True) or not (False),
+Freshwater_Source,No Units,"A short description of the type of freshwater source for freshwater samples e.g ""River""",
+Land_Based,No Units,"Geographic flag indicating whether the sample location falls on land rather than ocean. Determined using a high-resolution (10 m) global coastline dataset and a point-in-polygon spatial test (Shapely/GEOS). TRUE where the sample’s latitude/longitude intersects land polygons; FALSE otherwise. Used for distinguishing terrestrial samples, river mouths, and shoreline artefacts from open-water observations. ","Please note, while effective this is an approximate method and should be treated with caution and manual inspection should be applied where nessecary."
