@@ -23,12 +23,17 @@ Fork the repository and create a folder in ```Code``` and a folder in ```Data```
 
 Entries will be assessed out of 25 based on the following three criteria: 
 
-* Technical (/10)
-The score in this category will be based on the code in your notebook. Entries that score highly will have thoroughly commented code that runs efficiently and can be easily tweaked by the user to change parameters in the analysis. Code should avoid, as far as possible, including large number of software dependencies. If your code involves machine learning or other statistical methods, we will look for application of an appropriate test-train-validate pipeline to the data and error metric (e.g. RMSE or R-squared values). Here we will also assess how well you have integrated the AISIT database into your work (/3). 
-* Scientific (/10)
-The score in this category will be based on the discussion (in markdown cells) of the code and outputs in your notebook. Entries that score highly will effectively put the results in the context of oceanography, Arctic science and/or isotope tracer analysis. Critical discussion of the relative merits and drawbacks of the approach outlined in the notebook should also be included. If your code involves machine learning or other statistical methods,we will look for a critical discussion of any assumptions your model makes, how much your error assessment can be trusted, and any particular caveats (statistical or oceanographic) as to where your error assessment might be unrealistic.
-* Scope and innovation (/5)
-The score in this category will be based on the scope of your work. Entries that score highly will make use of recent developments in data science tools, and include in their analysis datasources beyond the AISIT database (e.g. gridded climate data). If the analysis is predictive, we will look for how ambitious your predictions are in terms of spatial and temporal coverage.
+* **Technical (/10)**
+
+*The score in this category will be based on the code in your notebook. Entries that score highly will have thoroughly commented code that runs efficiently and can be easily tweaked by the user to change parameters in the analysis. Code should avoid, as far as possible, including large number of software dependencies. If your code involves machine learning or other statistical methods, we will look for application of an appropriate test-train-validate pipeline to the data and error metric (e.g. RMSE or R-squared values). Here we will also assess how well you have integrated the AISIT database into your work (/3).*
+
+* **Scientific (/10)**
+
+*The score in this category will be based on the discussion (in markdown cells) of the code and outputs in your notebook. Entries that score highly will effectively put the results in the context of oceanography, Arctic science and/or isotope tracer analysis. Critical discussion of the relative merits and drawbacks of the approach outlined in the notebook should also be included. If your code involves machine learning or other statistical methods,we will look for a critical discussion of any assumptions your model makes, how much your error assessment can be trusted, and any particular caveats (statistical or oceanographic) as to where your error assessment might be unrealistic.*
+
+* **Scope and innovation (/5)**
+
+*The score in this category will be based on the scope of your work. Entries that score highly will make use of recent developments in data science tools, and include in their analysis datasources beyond the AISIT database (e.g. gridded climate data). If the analysis is predictive, we will look for how ambitious your predictions are in terms of spatial and temporal coverage.*
 
 ## Deadline 
 
