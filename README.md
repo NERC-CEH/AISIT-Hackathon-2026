@@ -9,7 +9,7 @@ Prizes: Exclusive BAS Merchandise plus broadcasts on AISIT webpages and blogs.
 Potential ideas for entries: Predict freshwater source contributions; Detect climate-driven anomalies; Visualise Arctic freshwater pathways; Build explainable AI models linking δ¹⁸O patterns to environmental drivers; Generate decision-support dashboards for researchers… or come up with your own ideas
 
 ## How to enter
-Fork the repository and create a folder in ```Code``` and a folder in ```Data``` each with the name of your team. Insert your competition code and associated data files in these folders. Don't copy the existing AISIT database, instead read it from ```Data/Common```. 
+Fork the repository and create a folder in ```Code``` and a folder in ```Data``` each with the name of your team. Insert your competition code and associated data files in these folders. Don't copy the existing AISIT database, instead read it from ```Data/Common```. Include a ```requirements.txt``` file with the required libraries to run your notebook. 
 
 *Include a comment in the pull request with the names and email addresses of everyone in your team.*
 
@@ -19,6 +19,16 @@ Fork the repository and create a folder in ```Code``` and a folder in ```Data```
 * In your notebook, alternate code and markdown cells to give your analysis a good narrative structure to make it easy to follow what you are doing and why you are doing it.
 * Don't include files larger than 250 MB. Use Git LFS for storage of files above 100 MB. If your code relies on datasets that are larger than this limit, crop the datasets to relevant parameters and/or geographies, or read them directly from online sources within the code.
 
+## Assessment criteria 
+
+Entries will be assessed out of 25 based on the following three criteria: 
+
+* Technical (/10)
+The score in this category will be based on the code in your notebook. Entries that score highly will have thoroughly commented code that runs efficiently and can be easily tweaked by the user to change parameters in the analysis. Code should avoid, as far as possible, including large number of software dependencies. If your code involves machine learning or other statistical methods, we will look for application of an appropriate test-train-validate pipeline to the data and error metric (e.g. RMSE or R-squared values). Here we will also assess how well you have integrated the AISIT database into your work (/3). 
+* Scientific (/10)
+The score in this category will be based on the discussion (in markdown cells) of the code and outputs in your notebook. Entries that score highly will effectively put the results in the context of oceanography, Arctic science and/or isotope tracer analysis. Critical discussion of the relative merits and drawbacks of the approach outlined in the notebook should also be included. If your code involves machine learning or other statistical methods,we will look for a critical discussion of any assumptions your model makes, how much your error assessment can be trusted, and any particular caveats (statistical or oceanographic) as to where your error assessment might be unrealistic.
+* Scope and innovation (/5)
+The score in this category will be based on the scope of your work. Entries that score highly will make use of recent developments in data science tools, and include in their analysis datasources beyond the AISIT database (e.g. gridded climate data). If the analysis is predictive, we will look for how ambitious your predictions are in terms of spatial and temporal coverage.
 
 ## Deadline 
 
