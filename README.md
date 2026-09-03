@@ -35,6 +35,9 @@ Entries will be assessed out of 25 based on the following three criteria:
 
 *The score in this category will be based on the scope of your work. Entries that score highly will make use of recent developments in data science tools, and include in their analysis datasources beyond the AISIT database (e.g. gridded climate data). If the analysis is predictive, we will look for how ambitious your predictions are in terms of spatial and temporal coverage.*
 
+## Use of AI Tools
+The use of AI tools to assist with entries is permitted. However, to ensure transparency, please provide a description of what tools were used, as well as a brief explanation of how they were used, in a markdown cell at the beginning of your notebook.  
+
 ## Deadline 
 
 Friday 30th October 2026, 9pm GMT. Winner announced on Friday 13th November 2026. 
